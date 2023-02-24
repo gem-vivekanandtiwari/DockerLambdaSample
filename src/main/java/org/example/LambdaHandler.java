@@ -17,7 +17,7 @@ public class LambdaHandler implements RequestHandler<Object, Object> {
             SeleniumTest2 test2 = new SeleniumTest2();
             test2.runSelenium();
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return null;
     }
