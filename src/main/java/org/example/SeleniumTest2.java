@@ -77,7 +77,7 @@ public class SeleniumTest2 {
         this.chromeBrowserTmpPath = tempChromeBinary.getAbsolutePath();*/
 
         Resource chromeDriverResource = sr.getAllResources().asMap().get("chromedriver").get(0);
-        File chromeDriver = new File(chromeDriverResource.getURI());
+        File chromeDriver = new File(chromeDriverResource.getURL().toURI());
         File tempChromeDriverBinary = new File("/tmp/" + chromeDriver.getName());
         tempChromeDriverBinary.createNewFile();
         FileUtils.copyFile(chromeDriver, tempChromeDriverBinary);
