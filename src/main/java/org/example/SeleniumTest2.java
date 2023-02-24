@@ -89,12 +89,12 @@ public class SeleniumTest2 {
 
 
     public void runSelenium(){
-        if(WebDriverManager.isDockerAvailable()){
+        //if(WebDriverManager.isDockerAvailable()){
         System.out.println("Running  in docker selenium");
         WebDriverManager.chromedriver().browserInDocker().setup();
-        } else {
+       /* } else {
             WebDriverManager.chromedriver().setup();
-        }
+        }*/
         ChromeOptions options = new ChromeOptions();
         options.setHeadless(true);
       //  options.setBinary(new File(this.chromeBrowserTmpPath));
