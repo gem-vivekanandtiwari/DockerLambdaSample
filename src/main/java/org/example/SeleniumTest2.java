@@ -66,15 +66,15 @@ public class SeleniumTest2 {
     public void copyChromeInTmp() throws URISyntaxException, IOException {
         ClassGraph cg = new ClassGraph();
         ScanResult sr = cg.disableModuleScanning().scan(10);
-        Resource resource = sr.getResourcesWithExtension(".deb").asMap().get("google-chrome-stable_current_amd64.deb").get(0);
-        URL chromeUrl = resource.getURL();
+        //Resource resource = sr.getResourcesWithExtension(".deb").asMap().get("google-chrome-stable_current_amd64.deb").get(0);
+       /* URL chromeUrl = resource.getURL();
         File chromeBinary = new File(chromeUrl.toURI());
         File tempChromeBinary = new File("/tmp/" + chromeBinary.getName());
         tempChromeBinary.createNewFile();
         FileUtils.copyFile(chromeBinary, tempChromeBinary);
         System.out.println(tempChromeBinary.getAbsolutePath());
         tempChromeBinary.setExecutable(true);
-        this.chromeBrowserTmpPath = tempChromeBinary.getAbsolutePath();
+        this.chromeBrowserTmpPath = tempChromeBinary.getAbsolutePath();*/
 
         Resource chromeDriverResource = sr.getAllResources().asMap().get("chromedriver").get(0);
         File chromeDriver = new File(chromeDriverResource.getURI());
@@ -91,7 +91,7 @@ public class SeleniumTest2 {
     public void runSelenium(){
         //if(WebDriverManager.isDockerAvailable()){
         System.out.println("Running  in docker selenium");
-        WebDriverManager.chromedriver().browserInDocker().setup();
+       // WebDriverManager.chromedriver().browserInDocker().setup();
        /* } else {
             WebDriverManager.chromedriver().setup();
         }*/
