@@ -113,6 +113,7 @@
                 <version>${maven-shade-plugin.version}</version>
                 <configuration>
                     <createDependencyReducedPom>false</createDependencyReducedPom>
+                    <finalName>ShadedJar</finalName>
                 </configuration>
                 <executions>
                     <execution>
@@ -121,6 +122,7 @@
                             <goal>shade</goal>
                         </goals>
                     </execution>
+
                 </executions>
             </plugin>
         </plugins>
