@@ -110,6 +110,7 @@ public class SeleniumTest2 {
         options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
+        options.addArguments("--shared-memory-path=/tmp");
         options.setBinary(chromeBinary);
         //options.setHeadless(true);
       //  options.setBinary(new File(this.chromeBrowserTmpPath));
