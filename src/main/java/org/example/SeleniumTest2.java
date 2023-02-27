@@ -107,7 +107,7 @@ public class SeleniumTest2 {
         options.addArguments("disable-infobars"); // disabling infobars
         options.addArguments("--disable-extensions"); // disabling extensions
         options.addArguments("--disable-gpu"); // applicable to windows os only
-        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+        //options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
         options.addArguments("--shared-memory-path=/tmp");
