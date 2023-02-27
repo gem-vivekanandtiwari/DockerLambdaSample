@@ -92,13 +92,20 @@ public class SeleniumTest2 {
 
 
     public void runSelenium(){
-        if(WebDriverManager.isDockerAvailable()){
+       /* if(WebDriverManager.isDockerAvailable()){
         System.out.println("Running  in docker selenium");
         WebDriverManager.chromedriver().browserInDocker().setup();
        } else {
             WebDriverManager.chromedriver().setup();
-        }
+        }*/
+        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+
         ChromeOptions options = new ChromeOptions();
+        File chromeBinary = new File("/usr/local/bin/google-chrome-stable_current_amd64.deb");
+        System.out.println(chromeBinary.exists());
+        chromeBinary.setExecutable(true);
+
+        options.setBinary(chromeBinary);
         options.setHeadless(true);
       //  options.setBinary(new File(this.chromeBrowserTmpPath));
         WebDriver driver = new ChromeDriver(options);
