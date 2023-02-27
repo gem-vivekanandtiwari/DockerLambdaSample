@@ -15,7 +15,7 @@ RUN yum install -y xorg-x11-drv-openchrome.x86_64
 #RUN yum install -y /usr/local/bin/google-chrome-stable_current_amd64.deb
 #RUN ls
 
-RUN CHROME_DRIVER_VERSION =`curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE` && \
+RUN CHROME_DRIVER_VERSION=`curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE` && \
     wget -O /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip && \
     unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
 
