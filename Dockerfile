@@ -6,7 +6,8 @@ FROM public.ecr.aws/lambda/java:11
 RUN yum clean all && yum -y update && yum -y install bzip2 \cups-libs \ dbus-glib \gtk3-devel \libXinerama.x86_64 \lsb \
 wget \ xorg-x11-server-Xvfb \yum-utils \ git \ maven \ gnupg2 \ pass
 RUN wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-RUN yum install ./google-chrome-stable_current_amd64.deb
+RUN ls
+RUN yum install  ./google-chrome-stable_current_amd64.deb
 
 
 #COPY target/classes ${LAMBDA_TASK_ROOT}
