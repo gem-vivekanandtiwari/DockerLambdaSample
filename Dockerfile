@@ -17,6 +17,12 @@ RUN ls
 
 COPY target/DockerLambdaSample-1.0-SNAPSHOT-jar-with-dependencies.jar ${LAMBDA_TASK_ROOT}/lib/
 
+RUN cd lib
+
+RUN ls
+
+RUN java -jar ${LAMBDA_TASK_ROOT}/lib/DockerLambdaSample-1.0-SNAPSHOT-jar-with-dependencies.jar
+
 RUN ls
 #COPY target/dependency/* ${LAMBDA_TASK_ROOT}/lib/
 
