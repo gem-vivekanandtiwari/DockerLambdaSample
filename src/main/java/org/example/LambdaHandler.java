@@ -15,7 +15,7 @@ public class LambdaHandler implements RequestHandler<Object, Object> {
             System.out.println(System.getProperty("os.arch"));
             //SeleniumTest.initializeWebDriver();
             SeleniumTest2 test2 = new SeleniumTest2();
-            test2.copyChromeInTmp();
+            //test2.copyChromeInTmp();
             test2.runSelenium();
         } catch (Exception e) {
             e.printStackTrace();
