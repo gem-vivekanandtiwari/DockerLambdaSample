@@ -104,7 +104,11 @@ public class SeleniumTest2 {
         File chromeBinary = new File("/usr/local/bin/google-chrome-stable_current_amd64.deb");
         System.out.println(chromeBinary.exists());
         chromeBinary.setExecutable(true);
-
+        options.addArguments("disable-infobars"); // disabling infobars
+        options.addArguments("--disable-extensions"); // disabling extensions
+        options.addArguments("--disable-gpu"); // applicable to windows os only
+        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+        options.addArguments("--no-sandbox");
         options.setBinary(chromeBinary);
         options.setHeadless(true);
       //  options.setBinary(new File(this.chromeBrowserTmpPath));
