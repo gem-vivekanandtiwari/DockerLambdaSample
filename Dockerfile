@@ -3,14 +3,14 @@ FROM public.ecr.aws/lambda/java:11
 RUN yum clean all
 RUN yum install -y wget unzip libX11
 
-RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb  \
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 #    && \
 #    yum install -y ./google-chrome-stable_current_amd64.deb
 RUN ls
 
 RUN CHROME_DRIVER_VERSION=`curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE` && \
     wget -O /tmp/chromedriver.zip https://chromedriver.storage.googleapis.com/111.0.5563.41/chromedriver_linux64.zip && \
-    unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/ \
+    unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/ 
 
 RUN ls
 
