@@ -109,8 +109,9 @@ public class SeleniumTest2 {
         options.addArguments("--disable-gpu"); // applicable to windows os only
         options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
         options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
         options.setBinary(chromeBinary);
-        options.setHeadless(true);
+        //options.setHeadless(true);
       //  options.setBinary(new File(this.chromeBrowserTmpPath));
         WebDriver driver = new ChromeDriver(options);
         driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
